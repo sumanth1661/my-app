@@ -1,28 +1,32 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React, { Suspense } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './index.css'; // Correct import based on the provided files
 import Header from './components/header';
-import Home from './components/home';
-import About from './components/about';
-import Services from './components/services';
-import Projects from './components/projects';
-import Blog from './components/blog';
+
+// Lazy loading components
+const Home = React.lazy(() => import('./components/home'));
+const About = React.lazy(() => import('./components/about'));
+const Services = React.lazy(() => import('./components/services'));
+const Projects = React.lazy(() => import('./components/projects'));
+const Blog = React.lazy(() => import('./components/blog'));
 
 function App() {
-  return (
-    <Router>
-      <div className="bg-black min-h-screen text-white">
-        <Header /> {/* Navigation bar component */}
-        
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/blog" element={<Blog />} />
-        </Routes>
-      </div>
-    </Router>
-  );
+    return (
+        <div className="App">
+            <Router>
+                <Header /> {/* Navigation bar component */}
+                <Suspense fallback={<div>Loading...</div>}>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/services" element={<Services />} />
+                        <Route path="/projects" element={<Projects />} />
+                        <Route path="/blog" element={<Blog />} />
+                    </Routes>
+                </Suspense>
+            </Router>
+        </div>
+    );
 }
 
 export default App;
