@@ -7,6 +7,7 @@ const Home = () => {
     const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
+        // Set isLoaded to true when the component mounts, triggering the animation
         setIsLoaded(true);
     }, []);
 
@@ -23,11 +24,9 @@ const Home = () => {
                         <img src={heroImage} alt="hero" className="w-[400px] h-auto lg:w-[450px]" />
                     </div>
 
-                    <div
-                        className={`flex-1 transform transition-transform duration-700 ${
-                            isLoaded ? 'translate-x-0' : 'translate-x-full'
-                        }`}
-                    >
+                    <div className={`flex-1 transform transition-transform duration-700 ${
+                        isLoaded ? 'translate-x-0' : 'translate-x-full'
+                    }`}>
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-monospace font-vt323 mb-6">
                             <span className="primary-color pb-2 block">I'm a UI/UX Designer,</span>
                             <br />
@@ -63,7 +62,8 @@ const Home = () => {
                             </a>
                             <a
                                 href="/"
-                                className="inline-flex justify-center items-center px-6 py-3 w-[120px] rounded-3xl border border-white font-raleway font-extrabold text-xl text-white text-center hover:bg-transparent hover:text-violet-700 hover:border-violet-700 transition-transform transform hover:scale-105"                            >
+                                className="inline-flex justify-center items-center px-6 py-3 w-[120px] rounded-3xl border border-white font-raleway font-extrabold text-xl text-white text-center hover:bg-transparent hover:text-violet-700 hover:border-violet-700 transition-transform transform hover:scale-105"
+                            >
                                 More
                             </a>
                         </div>
@@ -75,3 +75,4 @@ const Home = () => {
 };
 
 export default Home;
+
