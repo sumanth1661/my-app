@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import blogImage1 from '../assets/blogImage1.png';
 import blogImage2 from '../assets/blogImage2.png';
 import blogImage3 from '../assets/blogImage3.png';
-import underline from '../assets/underline.png';
+import headingiconimg from '../assets/headingicon.svg';
 import video from '../assets/video.mp4';
 
 // Importing carousel images
@@ -142,14 +142,13 @@ const Blog = () => {
     const posts = activeTab === 'Photography' ? photographyPosts : videographyPosts;
 
     return (
-        <div className="bg-black text-white py-16 px-8 font-raleway">
+        <div className="bg-black text-white py-16 px-8">
             <div className="container mx-auto">
-                {/* title */}
-                <div className="text-left mb-8">
-                    <h1 className="text-4xl md:text-5xl font-vt323 text-white  inline-block">
-                        My Blog
+                <div className="flex-1 mb-8 md:mb-0 md:pr-8">
+                    <h1 className="text-white lg:text-5xl sm:text-4xl font-monospace font-vt323 mb-8">
+                        <img src={headingiconimg} alt="icon" className="inline-block mr-2" />
+                        Blog
                     </h1>
-                    <img src={underline} alt="underline" className="w-32 md:w-48 mb-6" />
                 </div>
 
                 {/* Tab buttons */}

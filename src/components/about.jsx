@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import aboutImg1 from '../assets/about1.png';
-import aboutImg2 from '../assets/about2.png';
+import headingiconimg from '../assets/headingicon.svg';
+import aboutImg1 from '../assets/about1.svg';
+import aboutImg2 from '../assets/about2.svg';
+import aboutImg3 from '../assets/about3.svg';
+import aboutImg4 from '../assets/about4.svg';
+import aboutImg5 from '../assets/about5.svg';
+import aboutImg6 from '../assets/about6.svg';
 import figma from '../assets/figma.svg';
 import xd from '../assets/xd.svg';
 import jsreact from '../assets/jsreact.svg';
@@ -9,9 +14,7 @@ import ps from '../assets/ps.svg';
 import htmlLogo from '../assets/html.svg';
 import cssLogo from '../assets/css.svg';
 import tailwindLogo from '../assets/tailwind.svg';
-import underline from '../assets/underline.png';
 import downloadIcon from '../assets/download.png';
-
 
 const skills = [
   { name: 'Figma', logo: figma, percentage: 90 },
@@ -31,24 +34,25 @@ const getProgressColor = (percentage) => {
 };
 
 const About = () => {
-  const [isImage1, setIsImage1] = useState(true);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const images = [aboutImg1, aboutImg2, aboutImg3, aboutImg4, aboutImg5, aboutImg6];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIsImage1((prev) => !prev);
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 3000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
 
   return (
     <div className="bg-black text-white py-16 px-8">
-      <div className="container mx-auto flex flex-col md:flex-row items-start justify-between">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
         <div className="flex-1 mb-8 md:mb-0 md:pr-8">
-          <h1 className="text-white lg:text-5xl sm:text-4xl font-monospace font-vt323 mb-0">About Me</h1>
-          <img src={underline} alt="underline" className="w-32 md:w-48 mb-6" />
+          <h1 className="text-white lg:text-5xl sm:text-4xl font-monospace font-vt323 mb-8"><img src={headingiconimg} alt ="icon" className= "inline-block mr-2" />About Me</h1>
+          
 
-          <p className="lg:text-xl font-raleway">
+          <p className="lg:text-xl font-raleway mt-20">
             I'm a passionate UI/UX designer dedicated to crafting seamless user experiences. With a diverse portfolio
             spanning website, app, product design, and graphic illustrations, I thrive on turning ideas into intuitive, visually engaging interfaces.
             I hold a Master’s in Interaction and Experience Design from the University of Limerick, where I honed my ability to blend creativity
@@ -76,15 +80,15 @@ const About = () => {
                     className="ml-2 w-5 h-5 object-contain"
                 />
             </a>
-        </div>
+          </div>
         </div>
 
-        <div className="flex-shrink-0 w-full md:w-auto">
-          <div className="relative max-w-[600px] h-auto overflow-hidden">
+        <div className="flex-shrink-0 w-full md:w-auto md:flex md:items-center">
+          <div className="relative max-w-[420px] h-auto overflow-hidden mx-auto md:ml-0">
             <img
-              src={isImage1 ? aboutImg1 : aboutImg2}
+              src={images[currentImageIndex]}
               alt="About Me"
-              className="rounded-lg shadow-lg transition-transform duration-1000 ease-in-out"
+              className="rounded-lg shadow-lg transition-transform duration-700 ease-in-out"
             />
           </div>
         </div>

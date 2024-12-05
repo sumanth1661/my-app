@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import logoimg from '../assets/logo.svg';
 
 const Header = () => {
     const [nav, setNav] = useState(false);
@@ -18,11 +19,11 @@ const Header = () => {
 
     return (
         <header className='bg-gradient-to-r from-black via-gray-1000 to-black text-gray-100 shadow-md h-[78px] max-w-[1800px] mx-auto flex justify-between items-center px-8 z-10'>
-            <h1 className='text-3xl font-bold text-violet-600'>SM</h1>
+            <img src={logoimg} alt='Logo' className='h-10 w-auto' />
             
             {/* Desktop Navigation */}
             <nav className='hidden md:flex flex-grow justify-center space-x-6'>
-                {['/', '/about', '/services', '/projects', '/blog'].map((path, index) => (
+                {['/', '/about', '/services', '/projects', '/blog','/gallery'].map((path, index) => (
                     <Link
                         key={index}
                         to={path}
@@ -38,7 +39,7 @@ const Header = () => {
             <Link 
                 to="/contact" 
                 onClick={handleLinkClick}
-                className="hidden md:block px-6 py-2 bg-gradient-to-r from-violet-800 to-violet-700 text-white font-raleway font-bold rounded-3xl shadow-lg hover:from-violet-700 hover:to-violet-800 transition-transform transform hover:scale-105 duration-300"
+                className="hidden md:block px-6 py-2 border border-white text-white font-raleway font-bold rounded-3xl shadow-lg transition-transform transform hover:scale-105 duration-300"
             >
                 Contact Me
             </Link>
@@ -50,7 +51,7 @@ const Header = () => {
 
             {/* Mobile Navigation Menu */}
             <div className={`${nav ? 'left-0' : 'left-[-100%]'} fixed top-0 h-full w-[60%] bg-gray-900 text-gray-100 backdrop-blur-lg p-8 z-20 shadow-lg transition-all duration-500 ease-in-out`}>
-                <h1 className='text-3xl font-bold text-violet-600 mb-10'>SM</h1>
+                <img src={logoimg} alt='Logo' className='h-10 w-auto mb-10' />
                 <ul className='space-y-6 text-lg font-medium'>
                     {['/', '/about', '/services', '/projects', '/blog', '/contact'].map((path, index) => (
                         <li key={index} className={`${isActiveLink(path)} transition-colors duration-300`}>

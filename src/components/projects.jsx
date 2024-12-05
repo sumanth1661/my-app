@@ -1,8 +1,7 @@
 import React from 'react';
+import headingiconimg from '../assets/headingicon.svg';
 import Slider from 'react-slick';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'; // Smaller arrow icons resembling "<" and ">"
-import underline from '../assets/underline.png'; 
-
 import projectImg1 from '../assets/project1.png';
 import projectImg2 from '../assets/project2.png';
 import projectImg3 from '../assets/project3.png';
@@ -41,14 +40,13 @@ const Projects = () => {
   return (
     <div className="bg-black text-white py-16 px-8">
       <div className="container mx-auto">
-        <div className="text-left mb-12 ">
-        <h2 className="text-white lg:text-5xl sm:text-4xl font-monospace font-vt323 mb-0">
-          My Projects
-          <img src={underline} alt="underline" className="w-32 md:w-48 mb-6" /> 
-          <br/>
-        </h2>
+        <div className="text-left mb-12">
+          <h2 className="text-white lg:text-5xl sm:text-4xl font-monospace font-vt323 mb-0">
+            <img src={headingiconimg} alt="icon" className="inline-block mr-2" />
+            My Projects
+          </h2>
         </div>
-        
+
         <Slider {...settings} className="carousel">
           {/* Project 1 */}
           <div className="p-4">
@@ -63,7 +61,7 @@ const Projects = () => {
               </div>
             </div>
           </div>
-          
+
           {/* Project 2 */}
           <div className="p-4">
             <div className="relative group">
