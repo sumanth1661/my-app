@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import heroImage from '../assets/heroimage.png';
 import portfolioIcon from '../assets/portfolioicon.png';
+import bgimg from '../assets/bg.jpg';
 import { TypeAnimation } from 'react-type-animation';
 
 const Home = () => {
@@ -12,9 +13,9 @@ const Home = () => {
     }, []);
 
     return (
-        <div>
+        <div style={{ backgroundImage: `url(${bgimg})`, backgroundSize: 'cover', backgroundPosition: 'center', minHeight: '100vh' }}>
             {/* Home Section */}
-            <div className="bg-black text-white py-16 px-8">
+            <div className="text-white py-16 px-8">
                 <div className="container mx-auto flex flex-col md:flex-row items-start justify-between">
                     <div
                         className={`flex-shrink-0 w-full md:w-auto my-auto mx-auto md:mr-8 transform transition-transform duration-700 ${
@@ -75,4 +76,3 @@ const Home = () => {
 };
 
 export default Home;
-

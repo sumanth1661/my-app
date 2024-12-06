@@ -4,6 +4,7 @@ import blogImage2 from '../assets/blogImage2.png';
 import blogImage3 from '../assets/blogImage3.png';
 import headingiconimg from '../assets/headingicon.svg';
 import video from '../assets/video.mp4';
+import bgimg from '../assets/bg.jpg';
 
 // Importing carousel images
 import videoblogImage1 from '../assets/videoblogImage1.jpg';
@@ -56,7 +57,7 @@ const Blog = () => {
         {
             description: (
                 <>
-                    <h2 className="text-3xl font-semibold mb-6 text-center md:text-left">Behind the Scenes of Bellarom - Wake Up Your Best</h2>
+                    <h2 className="text-3xl font-semibold mb-6 text-center md:text-left font-raleway">Behind the Scenes of Bellarom - Wake Up Your Best</h2>
                     
                     {/* Video element */}
                     <div className="mb-12">
@@ -69,13 +70,13 @@ const Blog = () => {
                         </video>
                     </div>
 
-                    <p className="mb-8 leading-relaxed text-lg text-justify md:px-4">Creating a product advertisement for “Bellarom - Wake Up Your Best”, our videography assignment, was an incredible creative journey, and as the cinematographer, I had the privilege of shaping its visual narrative. Here's an inside look at the process and my personal experience in bringing this project to life.</p>
+                    <p className="mb-8 leading-relaxed text-lg text-justify md:px-4 font-raleway">Creating a product advertisement for “Bellarom - Wake Up Your Best”, our videography assignment, was an incredible creative journey, and as the cinematographer, I had the privilege of shaping its visual narrative. Here's an inside look at the process and my personal experience in bringing this project to life.</p>
 
-                    <h3 className="text-2xl font-semibold mb-4 text-center md:text-left">Translating Vision into Visuals</h3>
-                    <p className="mb-8 leading-relaxed text-lg text-justify md:px-4">The concept centered around a student tackling late-night study sessions with Bellarom Coffee as the ultimate source of motivation. My job was to visually tell this story, capturing the struggles, the moments of rejuvenation, and the inspiration that comes with every cup of coffee. Every frame was meticulously planned to evoke a sense of comfort and empowerment.</p>
+                    <h3 className="text-2xl font-semibold mb-4 text-center md:text-left font-raleway">Translating Vision into Visuals</h3>
+                    <p className="mb-8 leading-relaxed text-lg text-justify md:px-4 font-raleway">The concept centered around a student tackling late-night study sessions with Bellarom Coffee as the ultimate source of motivation. My job was to visually tell this story, capturing the struggles, the moments of rejuvenation, and the inspiration that comes with every cup of coffee. Every frame was meticulously planned to evoke a sense of comfort and empowerment.</p>
 
-                    <h3 className="text-2xl font-semibold mb-4 text-center md:text-left">The Process: Crafting Visual Perfection</h3>
-                    <div className="mb-8 md:px-4 leading-relaxed text-lg text-justify space-y-4">
+                    <h3 className="text-2xl font-semibold mb-4 text-center md:text-left font-raleway">The Process: Crafting Visual Perfection</h3>
+                    <div className="mb-8 md:px-4 leading-relaxed text-lg text-justify space-y-4 font-raleway">
                         <p><strong>Lighting Magic:</strong> Dorm rooms transformed into cinematic sets. Desk lamps and handheld lights were strategically positioned to create warm, cozy tones that complemented the narrative. The kitchen scenes, focusing on brewing coffee, demanded precise angles to capture the steam and inviting aroma.</p>
                         <p><strong>Storytelling Through Details:</strong> Each shot was designed to convey the student's emotional journey—from exhaustion to energy. Experimenting with angles, depth of field, and close-ups brought life to the coffee mug, brewing process, and the protagonist’s transformation.</p>
                     </div>
@@ -92,7 +93,7 @@ const Blog = () => {
                                         key={idx}
                                         src={img}
                                         alt={`Carousel ${idx + 1}`}
-                                        className="inline-block w-full h-auto object-cover"
+                                        className="inline-block w-full h-[300px] object-cover"
                                     />
                                 ))}
                             </div>
@@ -113,18 +114,18 @@ const Blog = () => {
                         </button>
                     </div>
 
-                    <h3 className="text-2xl font-semibold mb-4 text-center md:text-left">Giving Voice to the Visuals</h3>
-                    <p className="mb-8 leading-relaxed text-lg text-justify md:px-4">In addition to cinematography, I contributed computer-generated voiceovers, narrating the story with smooth transitions and emotional cues. These voiceovers were carefully synced to align with the visuals, enhancing the overall storytelling experience.</p>
+                    <h3 className="text-2xl font-semibold mb-4 text-center md:text-left font-raleway">Giving Voice to the Visuals</h3>
+                    <p className="mb-8 leading-relaxed text-lg text-justify md:px-4 font-raleway">In addition to cinematography, I contributed computer-generated voiceovers, narrating the story with smooth transitions and emotional cues. These voiceovers were carefully synced to align with the visuals, enhancing the overall storytelling experience.</p>
 
-                    <h3 className="text-2xl font-semibold mb-4 text-center md:text-left">The Take-aways</h3>
-                    <ul className="list-disc list-inside mb-8 leading-relaxed text-lg text-justify md:px-4 space-y-3">
+                    <h3 className="text-2xl font-semibold mb-4 text-center md:text-left font-raleway">The Take-aways</h3>
+                    <ul className="list-disc list-inside mb-8 leading-relaxed text-lg text-justify md:px-4 space-y-3 font-raleway">
                         <li><strong>Resourcefulness:</strong> Limited tools and confined spaces pushed us to think innovatively, using everyday items to achieve professional results. We used an iPhone as the main camera, multiple LED tubes and phone flashlights as mini floodlights and fill-lights for a cinematic effect, and a rolling chair like a gimbal for a few dramatic opening and closing shots.</li>
                         <li><strong>Teamwork:</strong> Collaborative brainstorming and problem-solving were vital to refine the ad and elevate every scene.</li>
                         <li><strong>Impactful Storytelling:</strong> Seeing the final polished video resonate with the intended emotions was deeply fulfilling.</li>
                     </ul>
 
-                    <h3 className="text-2xl font-semibold mb-4 text-center md:text-left">On The Whole..</h3>
-                    <p className="leading-relaxed text-lg text-justify md:px-4">The Bellarom - Wake Up Your Best ad stands as a testament to the power of teamwork and creativity. It captured the essence of the brand, showing how a simple cup of coffee can transform a moment. This project was not just a creative endeavor but a learning experience that reinforced the importance of resourcefulness, storytelling, and collaboration in filmmaking.</p>
+                    <h3 className="text-2xl font-semibold mb-4 text-center md:text-left font-raleway">On The Whole..</h3>
+                    <p className="leading-relaxed text-lg text-justify md:px-4 font-raleway">The Bellarom - Wake Up Your Best ad stands as a testament to the power of teamwork and creativity. It captured the essence of the brand, showing how a simple cup of coffee can transform a moment. This project was not just a creative endeavor but a learning experience that reinforced the importance of resourcefulness, storytelling, and collaboration in filmmaking.</p>
                 </>
             )
         },
@@ -142,70 +143,72 @@ const Blog = () => {
     const posts = activeTab === 'Photography' ? photographyPosts : videographyPosts;
 
     return (
-        <div className="bg-black text-white py-16 px-8">
-            <div className="container mx-auto">
-                <div className="flex-1 mb-8 md:mb-0 md:pr-8">
-                    <h1 className="text-white lg:text-5xl sm:text-4xl font-monospace font-vt323 mb-8">
-                        <img src={headingiconimg} alt="icon" className="inline-block mr-2" />
-                        Blog
-                    </h1>
-                </div>
+        <div style={{ backgroundImage: `url(${bgimg})`, backgroundSize: 'cover', backgroundPosition: 'center', minHeight: '100vh' }}>
+            <div className=" text-white py-16 px-8 font-raleway">
+                <div className="container mx-auto">
+                    <div className="flex-1 mb-8 md:mb-0 md:pr-8">
+                        <h1 className="text-white lg:text-5xl sm:text-4xl font-monospace font-vt323 mb-8 font-raleway">
+                            <img src={headingiconimg} alt="icon" className="inline-block mr-2" />
+                            Blog
+                        </h1>
+                    </div>
 
-                {/* Tab buttons */}
-                <div className="flex justify-center space-x-4 mb-12">
-                    <button
-                        className={`px-6 py-2 rounded-lg ${activeTab === 'Photography' ? 'bg-violet-700 text-white' : 'bg-gray-1000 text-gray-200'} font-semibold hover:bg-violet-900 transition`}
-                        onClick={() => setActiveTab('Photography')}
-                    >
-                        Photography
-                    </button>
-                    <button
-                        className={`px-6 py-2 rounded-lg ${activeTab === 'Videography' ? 'bg-violet-700 text-white' : 'bg-gray-1000 text-gray-200'} font-semibold hover:bg-violet-900 transition`}
-                        onClick={() => setActiveTab('Videography')}
-                    >
-                        Videography
-                    </button>
-                </div>
+                    {/* Tab buttons */}
+                    <div className="flex justify-center space-x-4 mb-12">
+                        <button
+                            className={`px-6 py-2 rounded-lg ${activeTab === 'Photography' ? 'bg-violet-700 text-white' : 'bg-gray-1000 text-gray-200'} font-semibold hover:bg-violet-900 transition`}
+                            onClick={() => setActiveTab('Photography')}
+                        >
+                            Photography
+                        </button>
+                        <button
+                            className={`px-6 py-2 rounded-lg ${activeTab === 'Videography' ? 'bg-violet-700 text-white' : 'bg-gray-1000 text-gray-200'} font-semibold hover:bg-violet-900 transition`}
+                            onClick={() => setActiveTab('Videography')}
+                        >
+                            Videography
+                        </button>
+                    </div>
 
-                {/* Blog posts container */}
-                <div className="space-y-16">
-                    {posts.map((post, index) => (
-                        <div key={index} className="flex flex-col lg:flex-row items-start gap-8 lg:gap-12">
-                            {/* Blog post image for Photography */}
-                            {activeTab === 'Photography' && (
-                                <div className="lg:w-1/3 overflow-hidden rounded-lg shadow-lg relative group">
-                                    <img 
-                                        src={post.image} 
-                                        alt={`Blog post ${index + 1}`} 
-                                        className="w-full h-full object-cover transition-transform duration-300 transform group-hover:scale-150 z-10"
-                                    />
-                                </div>
-                            )}
-
-                            {/* Blog post description */}
-                            <div className={`lg:w-${activeTab === 'Photography' ? '2/3' : 'full'} text-gray-300 text-lg leading-relaxed`}>
-                                <p>{post.description}</p>
-
-                                {/* Show technical details for Photography only */}
-                                {activeTab === 'Photography' && post.details && (
-                                    <div className="flex flex-wrap gap-4 mt-4">
-                                        <div className="bg-white bg-opacity-10 rounded-md px-4 py-2 text-sm">
-                                            <strong>ISO:</strong> {post.details.iso}
-                                        </div>
-                                        <div className="bg-white bg-opacity-10 rounded-md px-4 py-2 text-sm">
-                                            <strong>Shutter Speed:</strong> {post.details.shutterSpeed}
-                                        </div>
-                                        <div className="bg-white bg-opacity-10 rounded-md px-4 py-2 text-sm">
-                                            <strong>Aperture:</strong> {post.details.aperture}
-                                        </div>
-                                        <div className="bg-white bg-opacity-10 rounded-md px-4 py-2 text-sm">
-                                            <strong>Focal Length:</strong> {post.details.focalLength}
-                                        </div>
+                    {/* Blog posts container */}
+                    <div className="space-y-16">
+                        {posts.map((post, index) => (
+                            <div key={index} className="flex flex-col lg:flex-row items-start gap-8 lg:gap-12">
+                                {/* Blog post image for Photography */}
+                                {activeTab === 'Photography' && (
+                                    <div className="lg:w-1/3 overflow-hidden rounded-lg shadow-lg relative group">
+                                        <img 
+                                            src={post.image} 
+                                            alt={`Blog post ${index + 1}`} 
+                                            className="w-[350px] h-auto  rounded-lg z-10"
+                                        />
                                     </div>
                                 )}
+
+                                {/* Blog post description */}
+                                <div className={`${activeTab === 'Photography' ? 'lg:w-2/3' : 'lg:w-full'} text-gray-300 text-lg leading-relaxed font-raleway`}>
+                                    <p>{post.description}</p>
+
+                                    {/* Show technical details for Photography only */}
+                                    {activeTab === 'Photography' && post.details && (
+                                        <div className="flex flex-wrap gap-4 mt-4">
+                                            <div className="bg-white bg-opacity-10 rounded-md px-4 py-2 text-sm">
+                                                <strong>ISO:</strong> {post.details.iso}
+                                            </div>
+                                            <div className="bg-white bg-opacity-10 rounded-md px-4 py-2 text-sm">
+                                                <strong>Shutter Speed:</strong> {post.details.shutterSpeed}
+                                            </div>
+                                            <div className="bg-white bg-opacity-10 rounded-md px-4 py-2 text-sm">
+                                                <strong>Aperture:</strong> {post.details.aperture}
+                                            </div>
+                                            <div className="bg-white bg-opacity-10 rounded-md px-4 py-2 text-sm">
+                                                <strong>Focal Length:</strong> {post.details.focalLength}
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>
